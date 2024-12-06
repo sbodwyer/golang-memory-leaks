@@ -4,9 +4,11 @@ import (
     "fmt"
     "net/http"
     "time"
+	_ "net/http/pprof"
 )
 
 func main() {
+
     http.HandleFunc("/myLovelyFunction1", myLovelyHandler1)
     http.HandleFunc("/myLovelyFunction2", myLovelyHandler2)
     http.HandleFunc("/myLovelyFunction3", myLovelyHandler3)
